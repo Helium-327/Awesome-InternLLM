@@ -1,12 +1,12 @@
-# 入学篇-Linux
-
+# 书生实战营
+---
 🧐 本次学习由`InternStudio`平台赞助
 
 🧿算力平台：https://studio.intern-ai.org.cn/console/instance
 
 🧿闯关流程：https://aicarrier.feishu.cn/wiki/XBO6wpQcSibO1okrChhcBkQjnsf
 
-🧿闯关文档地址：https://github.com/InternLM/Tutorial/tree/camp3/docs/L0
+🧿闯关教程地址：https://github.com/InternLM/Tutorial/
 
 🧿推荐学习资料：[计算机教育中缺失的一课 · the missing semester of your cs education (missing-semester-cn.github.io)](https://missing-semester-cn.github.io/)
 
