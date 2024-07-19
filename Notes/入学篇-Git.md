@@ -32,8 +32,6 @@
 
 > 在项目目录中，.git 隐藏目录不属于工作区，而是 Git 的版本仓库。这个仓库区包含了所有历史版本的完整信息，是 Git 项目的“本体”。
 
-> 在项目目录中，.git 隐藏目录不属于工作区，而是 Git 的版本仓库。这个仓库区包含了所有历史版本的完整信息，是 Git 项目的“本体”。
-
 ### 文件状态
 
 #### 已跟踪
@@ -128,42 +126,98 @@
 
 ## 使用`Git`（四部曲）
 
-- `git add`：将修改过的文件添加到本地暂存区（Staging Area）。这一步是准备阶段，你可以选择性地添加文件，决定哪些修改应该被包括在即将进行的提交中。
-- `git commit -m “”`：将暂存区中的更改提交到本地仓库。这一步是将你的更改正式记录下来，每次提交都应附带一个清晰的描述信息，说明这次提交的目的或所解决的问题。
-- `git pull`：从远程仓库拉取最新的内容到本地仓库，并自动尝试合并到当前分支。这一步是同步的重要环节，确保你的工作基于最新的项目状态进行。在多人协作中，定期拉取可以避免将来的合并冲突。
-- `git push`：将本地仓库的更改推送到远程仓库。这一步是共享你的工作成果，让团队成员看到你的贡献。
+### `git add`
+
+> 将修改过的文件添加到本地暂存区（Staging Area）。这一步是准备阶段，你可以选择性地添加文件，决定哪些修改应该被包括在即将进行的提交中。
+
+### `git commit -m ""`
+
+> 将暂存区中的更改提交到本地仓库。这一步是将你的更改正式记录下来，每次提交都应附带一个清晰的描述信息，说明这次提交的目的或所解决的问题。
+
+### `git pull`
+
+> 从远程仓库拉取最新的内容到本地仓库，并自动尝试合并到当前分支。这一步是同步的重要环节，确保你的工作基于最新的项目状态进行。在多人协作中，定期拉取可以避免将来的合并冲突。
+
+### `git push`
+
+> 将本地仓库的更改推送到远程仓库。这一步是共享你的工作成果，让团队成员看到你的贡献。
 
 ## 开发流程
 
-- `Fork`目标项目
+### `Fork`目标项目
 
-- 获取仓库链接 (`ssh`)
+![image-20240719104311554](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202407191043624.png)
 
-- 查看分支
+### 获取仓库链接 (`ssh`)
 
-    ```shell
-    git branch -a
-    ```
+![image-20240719104412988](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202407191044053.png)
 
-    
+### `git clone `到本地
 
-- 创建并切换分支
+> 再进行这一步之前需要先将本地的`ssh-key`上传到个人的`github`仓库 ———> [6](##本地`ssh-key`上传到`github`仓库)
 
-    ```shell
-    git checkout -b <name-branch>
-    ```
+![image-20240719104621085](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202407191046136.png)
 
-    
+### 查看分支
 
-- 查看分支内容
+```shell
+git branch -a 
+```
 
-- 修改
+![image-20240719111116107](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202407191111166.png)
 
-- 提交修改到分支
+### 创建并切换分支
 
-    ```shell
-    git push origin <name-branch>
-    ```
+```shell
+git checkout -b <name-branch>
+```
 
-- 查看提交
 
+
+### 查看分支内容
+
+### 修改
+
+### 提交修改到分支
+
+```shell
+git push origin <name-branch>
+```
+
+### 查看提交
+
+## 本地`ssh-key`上传到`github`仓库
+
+> 本地仓库上传需要通过`ssh-key`进行身份验证，因此为了能`git push`到云端仓库，需要先将`ssh-key`上传到`github`仓库
+
+### 生成主机的公钥
+
+`powershell`终端执行下列代码后，按照提示一路回车
+
+```shell
+ssh-keygen -t rsa -C "your_email@example.com"
+```
+
+参数含义：
+
+`-t` 指定密钥类型，默认是 `rsa` ，可以省略。
+`-C` 设置注释文字，比如邮箱。
+`-f` 指定密钥文件存储文件名。
+
+### 获取主机的公钥
+
+> 生成密钥后，需要找到`/path/to/username/.ssh/id_rsa.pub`文件，该文件中存放的是生成的公钥
+
+![image-20240719105743629](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202407191057679.png)
+
+### 将公钥暴露给`github`
+
+![image-20240719111326173](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202407191113247.png)
+
+![image-20240719111302560](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202407191113614.png)
+
+![image-20240719111351359](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202407191113397.png)
+
+![image-20240719111435747](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202407191114791.png)
+
+> 添加完之后，即可回到 —-> [5.开发流程](##开发流程)
