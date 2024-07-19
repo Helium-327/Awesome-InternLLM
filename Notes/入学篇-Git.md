@@ -212,9 +212,9 @@ ssh-keygen -t rsa -C "your_email@example.com"
 
 ### 将公钥暴露给`github`
 
-![image-20240719111326173](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202407191113247.png)
+![image-20240719112237940](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202407191122079.png)
 
-![image-20240719111302560](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202407191113614.png)
+![image-20240719112146630](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202407191121731.png)
 
 ![image-20240719111351359](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202407191113397.png)
 
