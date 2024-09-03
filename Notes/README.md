@@ -2,7 +2,8 @@
 
 ---
 
-- [Git](./入学篇-Git.md)
-- [Linux](./入学篇-Linux.md)
-- [Python](./入学篇-Python.md)
-- [LMDeploy](./基础篇-LMDeploy部署.md)
+- [Git](./L0-Git.md)
+- [Linux](./L0-Linux.md)
+- [Python](./L0-Python.md)
+- [LMDeploy](./L1-LMDeploy部署.md)
+
