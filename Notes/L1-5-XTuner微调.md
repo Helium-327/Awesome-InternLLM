@@ -420,6 +420,8 @@ xtuner train path/to/internlm2_chat_1_8b_qlora_alpaca_e3_copy.py
   sudo apt-get -y install cuda-toolkit-12-6   #TODO：更改版本号
   ```
 
+添加环境变量参考博文：[16.04 - nvcc --version command says nvcc is not installed - Ask Ubuntu](https://askubuntu.com/questions/885610/nvcc-version-command-says-nvcc-is-not-installed)
+
 ### 训练完成
 
 ![image-20240903103448609](https://raw.githubusercontent.com/Helium-327/PicGo/main/win/markdown/202409031034682.png)
